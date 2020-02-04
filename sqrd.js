@@ -15,6 +15,8 @@ var app = angular.module('sqrdApp', []);
                         rate: parseInt ($scope.newsupe.rate),
                         available: true
                     })
+
+                    $scope.newsupe.name =  $scope.newsupe.belt = $scope.newsupe.rate = ""
                 }
 
 
