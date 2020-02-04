@@ -8,7 +8,14 @@ var app = angular.module('sqrdApp', []);
                     $scope.supes.splice(removedSupe, 1);
                 }
 
-
+                $scope.addSupe = function() {
+                    $scope.supes.push({
+                        name: $scope.newsupe.name,
+                        belt: $scope.newsupe.belt,
+                        rate: parseInt ($scope.newsupe.rate),
+                        available: true
+                    })
+                }
 
 
 
