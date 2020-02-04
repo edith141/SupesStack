@@ -24,6 +24,7 @@
                 <input type="text" placeholder="search..." ng-model = "search">
                 <ul>
                     <li ng-repeat="x in supes | orderBy: order | filter: search" ng-show = "x.available">
+                        <img src="{{ x.thumb }}" alt="img">
                         <h3>{{ x.name }} - {{ x.rate | currency: '₹'}}</h3>
                         <div class = "remove" ng-click = "removeSupe(x)">x</div>
                         <span class = "belt" style = "background: {{x.belt}};">{{ x.belt }} belt</span>

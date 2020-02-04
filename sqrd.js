@@ -28,19 +28,23 @@ var app = angular.module('sqrdApp', []);
                     {name: 'batman',
                     belt: 'green',
                     rate: 90,
-                    available: true}, 
+                    available: true,
+                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
                     {name: 'ironman',
                     belt: 'red',
                     rate: 90,
-                    available: true}, 
+                    available: true,
+                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
                     {name: 'spiderman',
                     belt: 'blue',
                     rate: 850,
-                    available: true}, 
+                    available: true,
+                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
                     {name: 'wonderwoman',
                     belt: 'black',
                     rate: 60,
-                    available: false}];
+                    available: false,
+                    thumb: "http://placehold.it/50x50/666666/ffffff"}];
 
                 // console.log($scope.squareNum);
                 console.log($scope.fnum);
