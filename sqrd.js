@@ -5,7 +5,7 @@ var app = angular.module('sqrdApp', []);
                     // console.log(supe)
                     var removedSupe = $scope.supes.indexOf(supe);
                     // console.log(removedSupe);
-                    
+                    $scope.supes.splice(removedSupe, 1);
                 }
 
 
