@@ -1,5 +1,17 @@
 var app = angular.module('sqrdApp', []);
             app.controller('sqrdCtrl', ['$scope', function($scope) {
+
+                $scope.removeSupe = function(supe) {
+                    // console.log(supe)
+                    var removedSupe = $scope.supes.indexOf(supe);
+                    // console.log(removedSupe);
+                    
+                }
+
+
+
+
+
                 $scope.fname ='Edith';
                 // $scope.fnum =  ;
                 $scope.squareNum = $scope.fnum * $scope.fnum;
