@@ -3,7 +3,8 @@ var app = angular.module('sqrdApp', ['ngRoute']);
 app.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.when('/home', {
-        templateUrl: "views/home.html"
+        templateUrl: "views/home.html",
+        controller: 'sqrdCtrl'
     }).when('/directory', {
         templateUrl: "views/directory.html",
         controller: 'sqrdCtrl'
@@ -37,6 +38,7 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
         function(response) {
             // console.log(data);
             $scope.supes = response.data;
+            $scope.randNum = Math.floor((Math.random() * $scope.supes.length));
             // console.log("JSON")
             // console.log(data.data)
         },
