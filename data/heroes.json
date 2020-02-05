@@ -1,1 +1,25 @@
-[{"name":"batman","belt":"green","rate":90,"available":true,"thumb":"https://avatar.oxro.io/avatar?name=bat man"},{"name":"ironman","belt":"red","rate":90,"available":true,"thumb":"https://avatar.oxro.io/avatar?name=Iron man"},{"name":"spiderman","belt":"blue","rate":850,"available":true,"thumb":"https://avatar.oxro.io/avatar?name=Spider Man"},{"name":"wonderwoman","belt":"black","rate":60,"available":false,"thumb":"https://avatar.oxro.io/avatar?name=Wonder Woman"}]
+[{
+	"name": "Batman",
+	"belt": "green",
+	"rate": 90,
+	"available": true,
+	"thumb": "https://avatar.oxro.io/avatar?name=bat man"
+}, {
+	"name": "Ironman",
+	"belt": "red",
+	"rate": 90,
+	"available": true,
+	"thumb": "https://avatar.oxro.io/avatar?name=Iron man"
+}, {
+	"name": "Spider Man",
+	"belt": "blue",
+	"rate": 850,
+	"available": true,
+	"thumb": "https://avatar.oxro.io/avatar?name=Spider Man"
+}, {
+	"name": "Wonder Woman",
+	"belt": "black",
+	"rate": 60,
+	"available": true,
+	"thumb": "https://avatar.oxro.io/avatar?name=Wonder Woman"
+}]

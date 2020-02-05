@@ -45,7 +45,7 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
             belt: $scope.sqrdCtrl.newsupe.belt,
             rate: parseInt ($scope.sqrdCtrl.newsupe.rate),
             available: true,
-            thumb: "https://avatar.oxro.io/avatar?name=" + $scope.sqrdCtrl.newsupe.name
+            thumb: "https://avatar.oxro.io/avatar?name=" + ($scope.sqrdCtrl.newsupe.name).toUpperCase()
         })
 
         $scope.sqrdCtrl.newsupe.name =  $scope.sqrdCtrl.newsupe.belt = $scope.sqrdCtrl.newsupe.rate = ""
