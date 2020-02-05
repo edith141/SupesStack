@@ -24,6 +24,7 @@ app.directive('randomSupe', [function() {
             title: '='
         },
         templateUrl: 'views/random.html',
+        // transclude: 'true'
         // controller: function() {}
     };
 }]);
