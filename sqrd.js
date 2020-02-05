@@ -22,7 +22,9 @@ app.directive('randomSupe', [function() {
         scope: { 
             supes: '=',
             title: '='
-        }
+        },
+        template: '<img class = "avatarImg" ng-src = "{{supes.thumb}}">',
+        controller: function() {}
     };
 }]);
 
