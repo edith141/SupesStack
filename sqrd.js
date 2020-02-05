@@ -10,14 +10,14 @@ var app = angular.module('sqrdApp', []);
 
                 $scope.addSupe = function() {
                     $scope.supes.push({
-                        name: $scope.newsupe.name,
-                        belt: $scope.newsupe.belt,
-                        rate: parseInt ($scope.newsupe.rate),
+                        name: $scope.sqrdCtrl.newsupe.name,
+                        belt: $scope.sqrdCtrl.newsupe.belt,
+                        rate: parseInt ($scope.sqrdCtrl.newsupe.rate),
                         available: true,
-                        thumb: "https://avatar.oxro.io/avatar?name=" + $scope.newsupe.name
+                        thumb: "https://avatar.oxro.io/avatar?name=" + $scope.sqrdCtrl.newsupe.name
                     })
 
-                    $scope.newsupe.name =  $scope.newsupe.belt = $scope.newsupe.rate = ""
+                    $scope.sqrdCtrl.newsupe.name =  $scope.sqrdCtrl.newsupe.belt = $scope.sqrdCtrl.newsupe.rate = ""
                 }
 
 

@@ -21,9 +21,9 @@
                 <p class = "col-sm-12">Squared: {{ fnum * fnum }}</p> -->
     
                 
-                <input type="text" placeholder="search..." ng-model = "search">
+                <input type="text" placeholder="search..." ng-model = "sqrdCtrl.search">
                 <ul>
-                    <li ng-repeat="x in supes | orderBy: order | filter: search" ng-show = "x.available">
+                    <li ng-repeat="x in supes | orderBy: order | filter: sqrdCtrl.search" ng-show = "x.available">
                         <img src="{{ x.thumb }}" alt="img">
                         <h3>{{ x.name }} - {{ x.rate | currency: '₹'}}</h3>
                         <div class = "remove" ng-click = "removeSupe(x)">x</div>
@@ -33,9 +33,9 @@
                 <!-- <div w3-test-directive></div> -->
 
                 <form ng-submit = "addSupe()">
-                    <input required type="text" placeholder = "name" ng-model = "newsupe.name">
-                    <input required type="text" placeholder = "belt" ng-model = "newsupe.belt">
-                    <input required type="text" placeholder = "rate" ng-model = "newsupe.rate">
+                    <input required type="text" placeholder = "name" ng-model = "sqrdCtrl.newsupe.name">
+                    <input required type="text" placeholder = "belt" ng-model = "sqrdCtrl.newsupe.belt">
+                    <input required type="text" placeholder = "rate" ng-model = "sqrdCtrl.newsupe.rate">
                     <input type="submit" value="Add new supe">
                 </form>
 
