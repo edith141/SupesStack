@@ -13,6 +13,21 @@ app.config(['$routeProvider', function($routeProvider) {
     })
 }]);
 
+
+app.directive('randomSupe', [function() {
+
+
+    return {
+        restrict: 'E',
+        scope: { 
+            supes: '=',
+            title: '='
+        }
+    };
+}]);
+
+
+
 app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
 
     $scope.removeSupe = function(supe) {
