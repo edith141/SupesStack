@@ -13,7 +13,8 @@ var app = angular.module('sqrdApp', []);
                         name: $scope.newsupe.name,
                         belt: $scope.newsupe.belt,
                         rate: parseInt ($scope.newsupe.rate),
-                        available: true
+                        available: true,
+                        thumb: "http://placehold.it/50x50/666666/ffffff"
                     })
 
                     $scope.newsupe.name =  $scope.newsupe.belt = $scope.newsupe.rate = ""
