@@ -23,8 +23,8 @@ app.directive('randomSupe', [function() {
             supes: '=',
             title: '='
         },
-        template: '<img class = "avatarImg" ng-src = "{{supes.thumb}}">',
-        controller: function() {}
+        templateUrl: 'views/random.html',
+        // controller: function() {}
     };
 }]);
 
