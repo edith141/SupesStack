@@ -84,6 +84,12 @@ main{
   color: #444;
 }
 
+body > div > div > ul > li > h3 {
+  text-align: center;
+  /* margin-bottom: 20px; */
+  /* padding-bottom: 10px; */
+}
+
 .content li span{
   float: right;
 }
@@ -119,4 +125,9 @@ main{
   cursor: pointer;
   margin-left: 10px;
   /* margin-bottom: 10px; */
+}
+body > div > div > ul > li > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
 }

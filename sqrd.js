@@ -14,7 +14,7 @@ var app = angular.module('sqrdApp', []);
                         belt: $scope.newsupe.belt,
                         rate: parseInt ($scope.newsupe.rate),
                         available: true,
-                        thumb: "http://placehold.it/50x50/666666/ffffff"
+                        thumb: "https://avatar.oxro.io/avatar?name=" + $scope.newsupe.name
                     })
 
                     $scope.newsupe.name =  $scope.newsupe.belt = $scope.newsupe.rate = ""
@@ -30,22 +30,22 @@ var app = angular.module('sqrdApp', []);
                     belt: 'green',
                     rate: 90,
                     available: true,
-                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
+                    thumb: "https://avatar.oxro.io/avatar?name=" + 'bat man'}, 
                     {name: 'ironman',
                     belt: 'red',
                     rate: 90,
                     available: true,
-                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
+                    thumb: "https://avatar.oxro.io/avatar?name=" + 'Iron man'}, 
                     {name: 'spiderman',
                     belt: 'blue',
                     rate: 850,
                     available: true,
-                    thumb: "http://placehold.it/50x50/666666/ffffff"}, 
+                    thumb: "https://avatar.oxro.io/avatar?name=" + 'Spider Man'}, 
                     {name: 'wonderwoman',
                     belt: 'black',
                     rate: 60,
                     available: false,
-                    thumb: "http://placehold.it/50x50/666666/ffffff"}];
+                    thumb: "https://avatar.oxro.io/avatar?name=" + 'Wonder Woman'}];
 
                 // console.log($scope.squareNum);
                 console.log($scope.fnum);
