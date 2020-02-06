@@ -202,6 +202,11 @@ body > main > div > form > input.ng-valid {
   font-size: smaller;
   font-weight: lighter;
   transition: linear .3s all;
+}
 
+body > main > div > button:nth-child(6) {
+  background-color: rgb(235, 148, 166);
+  /* border: rgb(245, 160, 180) 1px solid; */
+  color: #fff;
 }
 /* body > main > div > form > input.ng-pristine.ng-empty.ng-invalid.ng-invalid-required.ng-touched */
