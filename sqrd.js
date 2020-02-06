@@ -1,4 +1,4 @@
-var app = angular.module('sqrdApp', ['ngRoute']);
+var app = angular.module('sqrdApp', ['ngRoute' , 'ngAnimate']);
 
 app.config(['$routeProvider', function($routeProvider) {
 
@@ -64,8 +64,11 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
             console.log(err)
         });
 
+    $scope.removeAll = function() {
+        $scope.supes = [];
+    }
 
-
+    
     $scope.fname ='Edith';
     // $scope.fnum =  ;
     $scope.squareNum = $scope.fnum * $scope.fnum;

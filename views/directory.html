@@ -13,7 +13,7 @@
 
         
         <input class = "search" type="text" placeholder="search..." ng-model = "sqrdCtrl.search">
-        <ul>
+        <ul id="supes-list">
             <li ng-repeat="x in supes | orderBy: order | filter: sqrdCtrl.search" ng-show = "x.available">
                 <img class = "avatarImg" ng-src="{{ x.thumb }}" alt="img">
                 <h3>{{ x.name }} - {{ x.rate | currency: '₹'}}</h3>
@@ -23,12 +23,19 @@
         </ul>
         <!-- <div w3-test-directive></div> -->
 
-        <form ng-submit = "addSupe()">
-            <input required type="text" placeholder = "name" ng-model = "sqrdCtrl.newsupe.name">
-            <input required type="text" placeholder = "belt" ng-model = "sqrdCtrl.newsupe.belt">
-            <input required type="text" placeholder = "rate" ng-model = "sqrdCtrl.newsupe.rate">
+        <form ng-submit = "addSupe()" name = "newSupeForm">
+            <input ng-required = 'true' type="text" placeholder = "name" ng-model = "sqrdCtrl.newsupe.name" name = "supeName">
+            <input ng-required = 'true' type="text" placeholder = "belt" ng-model = "sqrdCtrl.newsupe.belt" name = "supeBelt">
+            <input ng-required = 'true' type="number" min="0" placeholder = "rate" ng-model = "sqrdCtrl.newsupe.rate" name = "supeRate">
             <input type="submit" value="Add new supe">
         </form>
+
+
+        <span ng-show = "newSupeForm.supeName.$touched && newSupeForm.supeName.$invalid">
+            ENter a valid SuperHero name!
+        </span>
+
+        <a style="display: block" href="" ng-click="removeAll()">RemoveAll</a>
 
     <!-- </div> -->
 </div>
