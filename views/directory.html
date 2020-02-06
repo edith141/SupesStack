@@ -16,9 +16,9 @@
         <ul id="supes-list">
             <li ng-repeat="x in supes | orderBy: order | filter: sqrdCtrl.search" ng-show = "x.available">
                 <img class = "avatarImg" ng-src="{{ x.thumb }}" alt="img">
-                <h3>{{ x.name }} - {{ x.rate | currency: '₹'}}</h3>
+                <h3>{{ x.name }} <br> - {{ x.rate | currency: '₹'}}</h3>
                 <div class = "remove" ng-click = "removeSupe(x)">x</div>
-                <span class = "belt" style = "background: {{x.belt}};">{{ x.belt }} belt</span>
+                <span class = "belt" style = "background: {{x.belt}};">belt</span>
             </li>
         </ul>
         <!-- <div w3-test-directive></div> -->

@@ -94,6 +94,12 @@ main{
   /* transform: translateY(-50%);  */
   margin-top: 0.8em;
   float: right;
+  font-size: 10px;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+  /* overflow: scroll; */
+  /* max-width: 25px; */
+  padding: 10px;
 }
 
 .content li h3{
@@ -103,9 +109,12 @@ main{
   transform: translateY(-50%);
   display: inline-block;
   font-weight: normal;
-  font-size: 22px;
-  text-align: center;
+  font-size: 1rem;
+  /* text-align: center; */
   margin-left: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
 }
 /* 
 body > main > div > div > input {
@@ -146,6 +155,10 @@ body > main > div > div > input {
   height: 50px;
   width: 50px;
   border-radius: 25px;
+}
+
+ul {
+  transition: 0.5s linear all;
 }
 
 main.ng-enter {
@@ -210,3 +223,8 @@ body > main > div > button:nth-child(6) {
   color: #fff;
 }
 /* body > main > div > form > input.ng-pristine.ng-empty.ng-invalid.ng-invalid-required.ng-touched */
+/* 
+.content li h3.rate {
+  display: block;
+  color: red;
+} */
