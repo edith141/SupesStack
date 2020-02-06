@@ -196,4 +196,12 @@ body > main > div > form > input.ng-valid {
   /* transition: 3s linear all; */
 }
 
+.warning {
+  margin-left: 15px;
+  color: rgb(173, 32, 32);
+  font-size: smaller;
+  font-weight: lighter;
+  transition: linear .3s all;
+
+}
 /* body > main > div > form > input.ng-pristine.ng-empty.ng-invalid.ng-invalid-required.ng-touched */

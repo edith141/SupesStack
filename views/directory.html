@@ -24,18 +24,26 @@
         <!-- <div w3-test-directive></div> -->
 
         <form ng-submit = "addSupe()" name = "newSupeForm">
-            <input ng-required = 'true' type="text" placeholder = "name" ng-model = "sqrdCtrl.newsupe.name" name = "supeName">
-            <input ng-required = 'true' type="text" placeholder = "belt" ng-model = "sqrdCtrl.newsupe.belt" name = "supeBelt">
-            <input ng-required = 'true' type="number" min="0" placeholder = "rate" ng-model = "sqrdCtrl.newsupe.rate" name = "supeRate">
+            <input autocomplete="off" ng-required = 'true' type="text" placeholder = "name" ng-model = "sqrdCtrl.newsupe.name" name = "supeName">
+            <span class = "warning" ng-show = "newSupeForm.supeName.$touched && newSupeForm.supeName.$invalid">
+                Enter a valid SuperHero name
+            </span>
+            <input autocomplete="off" ng-required = 'true' type="text" placeholder = "belt" ng-model = "sqrdCtrl.newsupe.belt" name = "supeBelt">
+            <span class = "warning" ng-show = "newSupeForm.supeBelt.$touched && newSupeForm.supeBelt.$invalid">
+                Enter a valid belt-color name
+            </span>
+            <input autocomplete="off" ng-required = 'true' type="number" min="0" placeholder = "rate" ng-model = "sqrdCtrl.newsupe.rate" name = "supeRate">
+            <span class = "warning" ng-show = "newSupeForm.supeRate.$touched && newSupeForm.supeRate.$invalid">
+                Enter a valid rate (number)
+            </span>
+
             <input type="submit" value="Add new supe">
         </form>
 
 
-        <span ng-show = "newSupeForm.supeName.$touched && newSupeForm.supeName.$invalid">
-            ENter a valid SuperHero name!
-        </span>
+        
 
-        <a style="display: block" href="" ng-click="removeAll()">RemoveAll</a>
+        <a  href="" ng-click="removeAll()">RemoveAll</a>
 
     <!-- </div> -->
 </div>
