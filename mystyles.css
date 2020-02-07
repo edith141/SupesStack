@@ -215,7 +215,7 @@ body > main > div > form > input.ng-valid {
   color: rgb(173, 32, 32);
   font-size: smaller;
   font-weight: lighter;
-  transition: linear .3s all;
+  transition: linear .2s all;
 }
 
 body > main > div > button:nth-child(6) {
