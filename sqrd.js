@@ -1,4 +1,4 @@
-var app = angular.module('sqrdApp', ['ngRoute' , 'ngAnimate']);
+var app = angular.module('sqrdApp', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', function($routeProvider) {
 
@@ -19,7 +19,7 @@ app.directive('randomSupe', [function() {
 
     return {
         restrict: 'E',
-        scope: { 
+        scope: {
             supes: '=',
             title: '='
         },
@@ -44,18 +44,19 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.supes.push({
             name: $scope.sqrdCtrl.newsupe.name,
             belt: $scope.sqrdCtrl.newsupe.belt,
-            rate: parseInt ($scope.sqrdCtrl.newsupe.rate),
+            rate: parseInt($scope.sqrdCtrl.newsupe.rate),
             available: true,
             thumb: "https://avatar.oxro.io/avatar?name=" + ($scope.sqrdCtrl.newsupe.name).toUpperCase()
         })
 
-        $scope.sqrdCtrl.newsupe.name =  $scope.sqrdCtrl.newsupe.belt = $scope.sqrdCtrl.newsupe.rate = ""
+        $scope.sqrdCtrl.newsupe.name = $scope.sqrdCtrl.newsupe.belt = $scope.sqrdCtrl.newsupe.rate = ""
     };
 
     $http.get('data/heroes.json').then(
         function(response) {
             // console.log(data);
             $scope.supes = response.data;
+            window.mydata = response.data;
             $scope.randNum = Math.floor((Math.random() * $scope.supes.length));
             // console.log("JSON")
             // console.log(data.data)
@@ -68,8 +69,8 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
         $scope.supes = [];
     }
 
-    
-    $scope.fname ='Edith';
+
+    $scope.fname = 'Edith';
     // $scope.fnum =  ;
     $scope.squareNum = $scope.fnum * $scope.fnum;
     // $scope.supes = [
@@ -101,11 +102,21 @@ app.controller('sqrdCtrl', ['$scope', '$http', function($scope, $http) {
     // console.log(angular.toJson($scope.supes));
     // console.log($scope.fname);
 
-    $scope.sqrFun = function () {
+    $scope.sqrFun = function() {
         $scope.squareNum = $scope.fnum * $scope.fnum;
     };
     // let nums = [1,2,3,4,5];
 }]);
+
+window.rem = function(ctrlName) {
+    // <html ng-app = "sqrdApp" >
+    var sel = this.document.getElementById('htmlelem');
+    console.log(sel)
+    console.log(angular.element(sel).scope())
+    return angular.element(sel).scope();
+}
+window.s = window.rem('');
+console.log("Hi!")
 
 // app.directive("w3TestDirective", function() {
 //     return {
